@@ -1,0 +1,144 @@
+safa@safa-Vostro-1015:~$ ls
+Desktop  Documents  Downloads  examples.desktop  Music  Pictures  Public  snap  Templates  Videos
+safa@safa-Vostro-1015:~$ ls -a
+.              .bash_logout  .config    Downloads         .ICEauthority  Music     Public  .ssh                       Videos
+..             .bashrc       Desktop    examples.desktop  .local         Pictures  .ros    .sudo_as_admin_successful
+.bash_history  .cache        Documents  .gnupg            .mozilla       .profile  snap    Templates
+safa@safa-Vostro-1015:~$ ls -la
+total 104
+drwxr-xr-x 18 safa safa 4096 märts 28 20:29 .
+drwxr-xr-x  3 root root 4096 märts 27 11:52 ..
+-rw-------  1 safa safa 1247 märts 28 20:29 .bash_history
+-rw-r--r--  1 safa safa  220 märts 27 11:52 .bash_logout
+-rw-r--r--  1 safa safa 3806 märts 27 21:08 .bashrc
+drwx------ 19 safa safa 4096 märts 28 18:27 .cache
+drwx------ 15 safa safa 4096 märts 28 14:33 .config
+drwxr-xr-x  2 safa safa 4096 märts 27 12:04 Desktop
+drwxr-xr-x  2 safa safa 4096 märts 27 12:04 Documents
+drwxr-xr-x  2 safa safa 4096 märts 27 12:04 Downloads
+-rw-r--r--  1 safa safa 8980 märts 27 11:52 examples.desktop
+drwx------  3 safa safa 4096 märts 27 12:32 .gnupg
+-rw-------  1 safa safa 3934 märts 28 18:12 .ICEauthority
+drwx------  3 safa safa 4096 märts 27 12:04 .local
+drwx------  5 safa safa 4096 märts 27 12:07 .mozilla
+drwxr-xr-x  2 safa safa 4096 märts 27 12:04 Music
+drwxr-xr-x  2 safa safa 4096 märts 28 13:50 Pictures
+-rw-r--r--  1 safa safa  807 märts 27 11:52 .profile
+drwxr-xr-x  2 safa safa 4096 märts 27 12:04 Public
+drwxr-xr-x  3 safa safa 4096 märts 27 21:10 .ros
+drwxr-xr-x  4 safa safa 4096 märts 28 18:28 snap
+drwx------  2 safa safa 4096 märts 27 12:32 .ssh
+-rw-r--r--  1 safa safa    0 märts 27 20:34 .sudo_as_admin_successful
+drwxr-xr-x  2 safa safa 4096 märts 27 12:04 Templates
+drwxr-xr-x  2 safa safa 4096 märts 27 12:04 Videos
+safa@safa-Vostro-1015:~$ mkdir mystuff
+safa@safa-Vostro-1015:~$ cd mystuff
+safa@safa-Vostro-1015:~/mystuff$ ls -a
+.  ..
+safa@safa-Vostro-1015:~/mystuff$ mkdir backups
+safa@safa-Vostro-1015:~/mystuff$ cd .
+safa@safa-Vostro-1015:~/mystuff$ cd ..
+safa@safa-Vostro-1015:~$ cd mystuff
+safa@safa-Vostro-1015:~/mystuff$ pwd
+/home/safa/mystuff
+safa@safa-Vostro-1015:~/mystuff$ ls mystuff
+ls: cannot access 'mystuff': No such file or directory
+safa@safa-Vostro-1015:~/mystuff$ cd
+safa@safa-Vostro-1015:~$ ls mystuff
+backups
+safa@safa-Vostro-1015:~$ ls mystuff/backups
+safa@safa-Vostro-1015:~$ ls ~/mystuff
+backups
+safa@safa-Vostro-1015:~$ ls ~/..
+safa
+safa@safa-Vostro-1015:~$ cd mystuff
+safa@safa-Vostro-1015:~/mystuff$ touch lincese.txt
+safa@safa-Vostro-1015:~/mystuff$ ls
+backups  lincese.txt
+safa@safa-Vostro-1015:~/mystuff$ cp license.txt license.bak
+cp: cannot stat 'license.txt': No such file or directory
+safa@safa-Vostro-1015:~/mystuff$ cp license.txt license.bak
+cp: cannot stat 'license.txt': No such file or directory
+safa@safa-Vostro-1015:~/mystuff$ cp license.txt license.bak
+cp: cannot stat 'license.txt': No such file or directory
+safa@safa-Vostro-1015:~/mystuff$ cd
+safa@safa-Vostro-1015:~$ cd mystuff
+safa@safa-Vostro-1015:~/mystuff$ ls
+backups  lincese.txt
+safa@safa-Vostro-1015:~/mystuff$ cp license.txt license.bak
+cp: cannot stat 'license.txt': No such file or directory
+safa@safa-Vostro-1015:~/mystuff$ cp license.txt license.bak
+safa@safa-Vostro-1015:~/mystuff$ ls
+backups  license.bak  license.txt
+safa@safa-Vostro-1015:~/mystuff$ mv license.bak backups/.
+safa@safa-Vostro-1015:~/mystuff$ ls
+backups  license.txt
+safa@safa-Vostro-1015:~/mystuff$ cd backups
+safa@safa-Vostro-1015:~/mystuff/backups$ ls
+license.bak
+safa@safa-Vostro-1015:~/mystuff/backups$ cd ..
+safa@safa-Vostro-1015:~/mystuff$ cp license.txt tempfile.txt
+safa@safa-Vostro-1015:~/mystuff$ ls
+backups  license.txt  tempfile.txt
+safa@safa-Vostro-1015:~/mystuff$ rm tempfile.txt
+safa@safa-Vostro-1015:~/mystuff$ ls
+backups  license.txt
+safa@safa-Vostro-1015:~/mystuff$ mkdir tempstuff
+safa@safa-Vostro-1015:~/mystuff$ ls
+backups  license.txt  tempstuff
+safa@safa-Vostro-1015:~/mystuff$ rmdir tempstuff
+safa@safa-Vostro-1015:~/mystuff$ ls
+backups  license.txt
+safa@safa-Vostro-1015:~/mystuff$ grep source license.txt
+safa@safa-Vostro-1015:~/mystuff$ grep Source license.txt
+safa@safa-Vostro-1015:~/mystuff$ 
+safa@safa-Vostro-1015:~/mystuff$ 
+safa@safa-Vostro-1015:~/mystuff$ git clone github.com/tunasafa/20s-safa-rtech
+fatal: repository 'github.com/tunasafa/20s-safa-rtech' does not exist
+safa@safa-Vostro-1015:~/mystuff$ git clone https://github.com/tunasafa/20s-safa-rtech
+Cloning into '20s-safa-rtech'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+safa@safa-Vostro-1015:~/mystuff$ ls
+20s-safa-rtech  backups  license.txt
+safa@safa-Vostro-1015:~/mystuff$ cd 20s-safa-rtech
+safa@safa-Vostro-1015:~/mystuff/20s-safa-rtech$ cat > sampleTextFile.txt
+safa tuna is trying ti finish the first lab
+safa@safa-Vostro-1015:~/mystuff/20s-safa-rtech$ git config user.email "tunasafa@hotmail.com"
+safa@safa-Vostro-1015:~/mystuff/20s-safa-rtech$ git config user.name "SAFA TUNA"
+safa@safa-Vostro-1015:~/mystuff/20s-safa-rtech$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	sampleTextFile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+safa@safa-Vostro-1015:~/mystuff/20s-safa-rtech$ git add sampleTextFile.txt
+safa@safa-Vostro-1015:~/mystuff/20s-safa-rtech$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   sampleTextFile.txt
+
+safa@safa-Vostro-1015:~/mystuff/20s-safa-rtech$ git commit -m "Learning git"
+[master 2661910] Learning git
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sampleTextFile.txt
+safa@safa-Vostro-1015:~/mystuff/20s-safa-rtech$ git push
+Username for 'https://github.com': tunasafa
+Password for 'https://tunasafa@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 331 bytes | 331.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/tunasafa/20s-safa-rtech
+   71c5010..2661910  master -> master
